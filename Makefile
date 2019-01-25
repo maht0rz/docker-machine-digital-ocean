@@ -1,0 +1,5 @@
+create-deployment-env:
+	docker-machine create --driver digitalocean --digitalocean-access-token=${DEPLOYMENT_TOKEN} ${ENV_NAME}
+
+up:
+	docker-compose -f ${DOCKER_COMPOSE_FILE} up
